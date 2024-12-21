@@ -1,8 +1,10 @@
 {
   "expo": {
     "name": "WeatherApp",
-    "slug": "WeatherApp",
+    "slug": "weather-app",
     "version": "1.0.0",
+    "description": "A simple weather app using mock data.",
+    "author": "Your Name",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -13,16 +15,30 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "This app needs access to your location to show weather information."
+      }
     },
     "android": {
+      "versionCode": 1,
+      "permissions": [
+        "ACCESS_FINE_LOCATION"
+      ],
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.joncy.weatherapp"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "privacy": "public",
+    "extra": {
+      "eas": {
+        "projectId": "cab624d1-82f9-4997-a856-cb8a92e694bc"
+      }
     }
   }
 }
